@@ -1,0 +1,2 @@
+# DistributedMatrixMultiplication
+This project uses the gRPC (Remote Procedure Call) framework for scaled square matrix multiplication. Through a REST API, the client sends a file with two matrices and a deadline parameter in seconds. A server middleware calculates the footprint and the number of servers needed for the matrix multiplication. It then distributes the multiplication load to a maximum of 8 servers.
