@@ -42,7 +42,7 @@ public class GRPCClientService {
         private String matrixSymbols;
 
         public String ping() {
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080).usePlaintext().build();
                 PingPongServiceGrpc.PingPongServiceBlockingStub stub = PingPongServiceGrpc.newBlockingStub(channel);
                 PongResponse helloResponse = stub.ping(PingRequest.newBuilder()
                 .setPing("")
@@ -68,7 +68,7 @@ public class GRPCClientService {
 
 
                 try { file.transferTo(dest); }
-                catch (Exception e) { return new FileUploadResponse(fileName, contentType, "File is not provided, please add a file!!! " + e.getMessage()); }
+                catch (Exception e) { return new FileUploadResponse(fileName, contentType, "File is not provided, please add a file! " + e.getMessage()); }
 
                 // Get both matrices from a single file
                 String matrixA_temp = txt2String(dest).split(matrixSymbols)[0];
