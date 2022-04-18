@@ -42,7 +42,7 @@ public class GRPCClientService {
         private String matrixSymbols;
 
         public String ping() {
-                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080).usePlaintext().build();
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
                 PingPongServiceGrpc.PingPongServiceBlockingStub stub = PingPongServiceGrpc.newBlockingStub(channel);
                 PongResponse helloResponse = stub.ping(PingRequest.newBuilder()
                 .setPing("")
