@@ -100,14 +100,14 @@ public class GRPCClientService {
                 System.out.println("Deadline: " + deadline + " seconds");
 
                 // Different channels for each IP address
-                ManagedChannel channel1 = ManagedChannelBuilder.forAddress("35.247.117.159", 8080).usePlaintext().build();
-                ManagedChannel channel2 = ManagedChannelBuilder.forAddress("34.66.101.46", 8080).usePlaintext().build();
-                ManagedChannel channel3 = ManagedChannelBuilder.forAddress("34.68.163.178", 8080).usePlaintext().build();
-                ManagedChannel channel4 = ManagedChannelBuilder.forAddress("34.69.124.227", 8080).usePlaintext().build();
-                ManagedChannel channel5 = ManagedChannelBuilder.forAddress("104.198.176.223", 8080).usePlaintext().build();
-                ManagedChannel channel6 = ManagedChannelBuilder.forAddress("34.121.144.77", 8080).usePlaintext().build();
-                ManagedChannel channel7 = ManagedChannelBuilder.forAddress("130.211.236.66", 8080).usePlaintext().build();
-                ManagedChannel channel8 = ManagedChannelBuilder.forAddress("35.232.239.11", 8080).usePlaintext().build();
+                ManagedChannel channel1 = ManagedChannelBuilder.forAddress("35.223.198.172", 8080).usePlaintext().build();
+                ManagedChannel channel2 = ManagedChannelBuilder.forAddress("104.154.84.80", 8080).usePlaintext().build();
+                ManagedChannel channel3 = ManagedChannelBuilder.forAddress("34.123.190.154", 8080).usePlaintext().build();
+                ManagedChannel channel4 = ManagedChannelBuilder.forAddress("34.67.30.174", 8080).usePlaintext().build();
+                ManagedChannel channel5 = ManagedChannelBuilder.forAddress("34.134.135.99", 8080).usePlaintext().build();
+                ManagedChannel channel6 = ManagedChannelBuilder.forAddress("35.184.73.91", 8080).usePlaintext().build();
+                ManagedChannel channel7 = ManagedChannelBuilder.forAddress("34.133.244.150", 8080).usePlaintext().build();
+                ManagedChannel channel8 = ManagedChannelBuilder.forAddress("34.133.210.206", 8080).usePlaintext().build();
 
                 // Different Stubs for each channel
                 MatrixServiceGrpc.MatrixServiceBlockingStub stub1 = MatrixServiceGrpc.newBlockingStub(channel1);
